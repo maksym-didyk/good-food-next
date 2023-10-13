@@ -1,0 +1,88 @@
+@import '../../assets/styles/scss/mixins.scss';
+
+.header {
+  padding: 40px 70px 110px;
+  position: absolute;
+  top: 42;
+  left: 0;
+  width: 100%;
+
+  @include onTablet {
+    padding: 40px 40px 110px;
+  }
+
+  @include onPhone {
+    padding: 40px 20px 110px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    cursor: pointer;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    cursor: pointer;
+
+    @include onPhone {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: #F3F3F3;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+
+    &--black {
+      color: #000;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 54px;
+    border-radius: 16px;
+    border: 1px solid #FFF;
+    background: #C21807;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      box-shadow: 0px 3px 6px 0px rgba(194, 24, 7, 0.30);
+      background: transparent;
+      border: 1px solid #C21807;
+      background: transparent;
+      color:#000;
+    }
+
+    @include onPhone {
+      height: 48px;
+    }
+  }
+}

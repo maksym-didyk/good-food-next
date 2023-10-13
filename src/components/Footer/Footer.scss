@@ -1,0 +1,150 @@
+@import '../../assets/styles/scss/mixins.scss';
+
+.footer {
+  padding: 120px 70px 20px;
+  // margin-top: 120px;
+  color: #1D1D1D;
+
+  &--black {
+    background: #000;
+    color: #fff;
+  }
+
+  @include onTablet {
+    width: 100%;
+    padding: 120px 40px;
+  }
+
+  @include onPhone {
+    width: 100%;
+    padding: 120px 20px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: left;
+
+    @include onPhone {
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    color: #C21807;
+    font-size: 25px;
+    font-weight: 500;
+
+    @include onPhone {
+      font-size: 20px;
+    }
+  }
+
+  &__menu {
+    margin-top: 56px;
+
+    @include onPhone {
+      margin-top: 32px;
+    }
+  }
+
+  &__li {
+    margin-top: 20px;
+
+    @include onPhone {
+      margin-top: 16px;
+    }
+  }
+
+  &__link {
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+
+    &--white {
+      color: #fff;
+    }
+
+    @include onPhone {
+      font-size: 16px;
+    }
+  }
+
+  &__logowrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 58px;
+
+    @include onPhone {
+      justify-content: center;
+      align-items: center;
+      margin-top: 32px;
+    }
+  }
+
+  &__rights {
+    font-size: 18px;
+    font-weight: 400;
+
+    @include onPhone {
+      font-size: 14px;
+    }
+  }
+
+  &__phone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-top: 56px;
+
+    @include onPhone {
+      justify-content: center;
+      margin-top: 32px;
+    }
+  }
+
+  &__number {
+    color: #C21807;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+
+    @include onPhone {
+      font-size: 20px;
+    }
+  }
+
+  &__call {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 20px;
+
+    @include onPhone {
+      font-size: 16px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 22px;
+
+    @include onPhone {
+      justify-content: center;
+    }
+  }
+}

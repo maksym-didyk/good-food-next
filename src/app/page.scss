@@ -1,0 +1,397 @@
+@import '../assets/styles/scss/mixins.scss';
+
+.accordion-item {
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-btn-focus-box-shadow: transparent;
+  --bs-accordion-btn-color: #C21807;
+  --bs-accordion-active-color: #C21807;
+  --bs-accordion-btn-icon: url('../assets/images/arrow.svg');
+  --bs-accordion-btn-active-icon: url('../assets/images/arrow.svg');
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background-color: #C21807;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    display: inline-block;
+    width: 5rem;
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+
+    @include onPhone {
+      display: none;
+    }
+}
+
+.homepage {
+  &__hero{
+    background: url('../assets/images/crop-plate-with-savory-salad.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+
+    &-section {
+      padding: 222px 0 0 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+      gap: 45px;
+      max-width: 859px;
+
+      @include onTablet {
+        width: 100%;
+        padding: 222px 0 0 40px;
+      }
+
+      @include onPhone {
+        width: 100%;
+        padding: 222px 0 0 20px;
+      }
+    }
+
+    &--title {
+      color: #F2F2F2;
+      font-size: 66px;
+      font-weight: 700;
+      text-align: left;
+
+      @include onPhone {
+        font-size: 44px;
+      }
+    }
+
+    &--text {
+      color: #F2F2F2;
+      font-size: 24px;
+      font-weight: 400;
+      text-align: left;
+
+      @include onPhone {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__menu {
+    padding: 120px 70px;
+
+    @include onTablet {
+      width: 100%;
+      padding: 120px 40px;
+    }
+
+    @include onPhone {
+      width: 100%;
+      padding: 100px 20px;
+    }
+
+    &--title {
+      color: #000;
+      font-size: 72px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 84px;
+
+      @include onPhone {
+        font-size: 48px;
+      }
+    }
+  }
+
+  &__delivery {
+    text-align: center;
+
+    &--title {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 75px;
+    flex-wrap: wrap;
+  }
+
+  &__aboutus {
+    padding: 90px 70px;
+    background: #111114;
+
+    @include onTablet {
+      width: 100%;
+      padding: 90px 40px 190px;
+    }
+
+    @include onPhone {
+      width: 100%;
+      padding: 90px 20px 190px;
+    }
+
+    &--content {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 30px;
+      text-align: left;
+      color: #FFF;
+
+      @include onTablet {
+        flex-wrap: wrap;
+      }
+    }
+
+    &--left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &--title {
+      font-size: 72px;
+      font-weight: 700;
+
+      @include onPhone {
+        font-size: 48px;
+      }
+    }
+
+    &--text {
+      font-size: 24px;
+      font-weight: 300;
+
+      @include onPhone {
+        font-size: 18px;
+      }
+    }
+
+    &--list {
+      font-size: 16px;
+      font-weight: 400;
+
+      @include onPhone {
+        font-size: 14px;
+      }
+    }
+
+    &--li {
+      margin-top: 12px;
+      margin-left: 16px;
+      padding-left: 16px;
+      position: relative;
+      
+      &::before {
+        content: '';
+        height: 24px;
+        width: 24px;
+        border: 2px solid #C21807;
+        border-radius: 50%;;
+        position: absolute;
+        top: 50%;
+        left: - 16px;
+        transform: translateY(-50%);
+
+        @include onPhone {
+          top: 30%;
+        }
+      }
+    }
+
+    &--image {
+      max-height: 550px;
+      border-radius: 16px;
+
+      @include onTablet {
+        width: 100%;
+        height: auto;
+      }
+
+      @include onPhone{
+        width: 100%;
+      }
+    }
+  }
+
+  &__whywecard {
+    width: 262px;
+    color: #121214;
+    text-align: center;
+
+    &--image {
+      height: 70px;
+      width: 70px;
+    }
+
+    &--title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 19px;
+    }
+
+    &--content {
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 14px;
+    }
+  }
+
+  &__commentwrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__comments {
+    padding: 0 70px 120px;
+
+    @include onTablet {
+      padding: 120px 40px;
+    }
+
+    @include onPhone {
+      padding: 100px 20px;
+    }
+  }
+
+  &__comment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    width: 80%;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #1D1D1D;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #F2F2F2;
+
+    @include onPhone{
+      padding: 30px 0 60px;
+      height: auto;
+      font-size: 14px;
+      line-height: normal;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      width: 70%;
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+
+      @include onPhone {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &-link {
+      color: #F2F2F2;
+      text-decoration: none;
+    }
+  }
+
+  &__maptext {
+    color: #121214;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 5px 0 40px;
+
+    &--red {
+      font-size: 18px;
+      font-weight: 700;
+      color: #C21807;
+    }
+  }
+
+  &__accordion {
+    width: 50%;
+
+    @include onPhone {
+      width: 100%;
+    }
+  }
+
+  &__formsection {
+    display: flex;
+    flex-direction: row;
+    background: #1D1D1D;
+
+    @include onTablet {
+      flex-wrap: wrap;
+    }
+
+    &-image {
+      object-fit: cover;
+      object-position: top center;
+      min-width: 710px;
+      min-height: 798px;
+
+      @include onTablet {
+        min-width: 100%;
+        height: 600px;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      padding: 50px 73px;
+      color: #F2F2F2;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 40px;
+
+      @include onPhone {
+        font-size: 16px;
+        padding: 50px 20px;
+      }
+    }
+
+    &-title {
+      color: #C21807;
+      font-size: 50px;
+      font-weight: 700;
+      line-height: normal;
+
+      @include onPhone {
+        font-size: 40px;
+      }
+    }
+
+    &-policy {
+      display: flex;
+      justify-content: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+    }
+
+    .red {
+      color: #C21807;
+    }
+  }
+}
